@@ -15,4 +15,8 @@ function getCart() {
   return cart;
 }
 
-module.exports = { addItem, removeItem, getCart };
+function clearCart() {
+  cart.length = 0;
+}
+
+module.exports = { addItem, removeItem, getCart, clearCart };

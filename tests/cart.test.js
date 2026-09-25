@@ -1,5 +1,9 @@
 const cart = require('../src/cart');
 
+beforeEach(() => {
+  cart.clearCart();
+});
+
 test('addItem adds to cart', () => {
   cart.addItem({ id: 1, name: 'Widget' });
   expect(cart.getCart().length).toBe(1);
